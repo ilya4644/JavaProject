@@ -16,7 +16,7 @@ public class StudentGrade {
     private int totalSeminarScore;
     private final List<Section> sections;
 
-    public StudentGrade(UUID ulearnId, int maxActivitiesScore, int maxExerciseScore, int maxPracticeScore, int maxSeminarScore, int totalActivitiesScore, int totalExerciseScore, int totalPracticeScore, int totalSeminarScore) {
+    public StudentGrade(UUID ulearnId, int maxActivitiesScore, int maxExerciseScore, int maxPracticeScore, int maxSeminarScore, int totalActivitiesScore, int totalExerciseScore, int totalPracticeScore, int totalSeminarScore, ArrayList<Section> sections) {
         this.ulearnId = ulearnId;
         this.maxActivitiesScore = maxActivitiesScore;
         this.maxExerciseScore = maxExerciseScore;
@@ -26,7 +26,7 @@ public class StudentGrade {
         this.totalExerciseScore = totalExerciseScore;
         this.totalPracticeScore = totalPracticeScore;
         this.totalSeminarScore = totalSeminarScore;
-        sections = new ArrayList<>();
+        this.sections = sections;
     }
 
     public UUID getUlearnId() {

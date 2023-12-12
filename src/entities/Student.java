@@ -3,16 +3,16 @@ package entities;
 
 import java.util.UUID;
 
-class Student {
-    private final UUID ulearnId;
+public class Student {
     private final String surname;
     private final String name;
+    private final UUID ulearnId;
     private final String email;
     private final String group;
     private final StudentGrade studentGrade;
 
 
-    Student(String surname, UUID ulearnId, String name, String email, String group, StudentGrade studentGrade) {
+    public Student(String surname, String name, UUID ulearnId, String email, String group, StudentGrade studentGrade) {
         this.ulearnId = ulearnId;
         this.surname = surname;
         this.name = name;

@@ -4,39 +4,29 @@ import java.util.UUID;
 
 public class Task {
     private final UUID ulearnId;
-    private final String surname;
-    private final String name;
     private final TaskType taskType;
     private final int maxScore;
     private int studentScore;
+    private final String taskName;
 
-    public Task(UUID ulearnId, String surname, String name, TaskType taskType, int maxScore, int studentScore) {
+    public Task(UUID ulearnId, TaskType taskType, int maxScore, int studentScore, String taskName) {
         this.ulearnId = ulearnId;
-        this.surname = surname;
-        this.name = name;
         this.taskType = taskType;
         this.maxScore = maxScore;
         this.studentScore = studentScore;
+        this.taskName = taskName;
     }
 
     public UUID getUlearnId() {
-        return ulearnId;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getName() {
-        return name;
+        return this.ulearnId;
     }
 
     public int getMaxScore() {
-        return maxScore;
+        return this.maxScore;
     }
 
     public int getStudentScore() {
-        return studentScore;
+        return this.studentScore;
     }
 
     public void setStudentScore(int studentScore) {
@@ -44,6 +34,10 @@ public class Task {
     }
 
     public TaskType getTaskType() {
-        return taskType;
+        return this.taskType;
+    }
+
+    public String getTaskName() {
+        return this.taskName;
     }
 }
