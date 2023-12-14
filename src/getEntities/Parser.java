@@ -120,16 +120,17 @@ public class Parser {
     private Task getTask(UUID ulearnId, int taskIndex, String[] maxScoreRow, String[] studentRow, String[] taskNamesRow) {
         TaskType taskType = null;
         String taskName = taskNamesRow[taskIndex];
-        if (taskName.startsWith("Упр") && !taskName.equals("Упр")) {
+        if (taskName.startsWith("Упр")) {
             taskType = TaskType.Exercise;
-        } else if (taskName.startsWith("ДЗ") && !taskName.equals("ДЗ")) {
+        } else if (taskName.startsWith("ДЗ")) {
             taskType = TaskType.Practice;
         } else if (taskName.startsWith("Сем")) {
             taskType = TaskType.Seminar;
         }
         int maxScore = Integer.parseInt(maxScoreRow[taskIndex]);
         int studentScore = Integer.parseInt(studentRow[taskIndex]);
-        return new Task(ulearnId, taskType, maxScore, studentScore, taskName);
+        UUID taskId = UUID.randomUUID();
+        return new Task(ulearnId, taskType, maxScore, studentScore, taskName, taskId);
     }
 
     public ArrayList<Integer> getSectionsIndexes(String[] sectionNamesRow) {

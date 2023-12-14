@@ -1,13 +1,12 @@
 package entities;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 public class Section {
-    private final String sectionName;
-    private final UUID sectionId;
     private final UUID ulearnId;
+    private final UUID sectionId;
+    private final String sectionName;
     private final int maxExerciseScore;
     private final int maxPracticeScore;
     private final int maxSeminarScore;
@@ -43,7 +42,7 @@ public class Section {
         return this.sectionId;
     }
 
-    public List<Task> getTasks() {
+    public ArrayList<Task> getTasks() {
         return this.tasks;
     }
 

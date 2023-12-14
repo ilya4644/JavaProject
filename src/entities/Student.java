@@ -4,9 +4,9 @@ package entities;
 import java.util.UUID;
 
 public class Student {
+    private final UUID ulearnId;
     private final String surname;
     private final String name;
-    private final UUID ulearnId;
     private final String email;
     private final String group;
     private final StudentGrade studentGrade;

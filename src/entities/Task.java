@@ -8,13 +8,15 @@ public class Task {
     private final int maxScore;
     private int studentScore;
     private final String taskName;
+    private final UUID taskId;
 
-    public Task(UUID ulearnId, TaskType taskType, int maxScore, int studentScore, String taskName) {
+    public Task(UUID ulearnId, TaskType taskType, int maxScore, int studentScore, String taskName, UUID taskId) {
         this.ulearnId = ulearnId;
         this.taskType = taskType;
         this.maxScore = maxScore;
         this.studentScore = studentScore;
         this.taskName = taskName;
+        this.taskId = taskId;
     }
 
     public UUID getUlearnId() {
@@ -39,5 +41,9 @@ public class Task {
 
     public String getTaskName() {
         return this.taskName;
+    }
+
+    public UUID getTaskId() {
+        return taskId;
     }
 }

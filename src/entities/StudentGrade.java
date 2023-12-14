@@ -1,7 +1,6 @@
 package entities;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 public class StudentGrade {
@@ -14,7 +13,7 @@ public class StudentGrade {
     private int totalExerciseScore;
     private int totalPracticeScore;
     private int totalSeminarScore;
-    private final List<Section> sections;
+    private final ArrayList<Section> sections;
 
     public StudentGrade(UUID ulearnId, int maxActivitiesScore, int maxExerciseScore, int maxPracticeScore, int maxSeminarScore, int totalActivitiesScore, int totalExerciseScore, int totalPracticeScore, int totalSeminarScore, ArrayList<Section> sections) {
         this.ulearnId = ulearnId;
@@ -69,7 +68,7 @@ public class StudentGrade {
         this.totalSeminarScore = totalSeminarScore;
     }
 
-    public List<Section> getSections() {
+    public ArrayList<Section> getSections() {
         return sections;
     }
 
