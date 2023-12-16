@@ -10,5 +10,6 @@
     <orderEntry type="library" name="opencsv" level="project" />
     <orderEntry type="library" name="postgresql" level="project" />
     <orderEntry type="library" name="jfree.jfreechart" level="project" />
+    <orderEntry type="library" name="fasterxml.jackson.datatype.json" level="project" />
   </component>
 </module>

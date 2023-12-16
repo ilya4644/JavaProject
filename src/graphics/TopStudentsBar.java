@@ -4,7 +4,9 @@ import database.TopStudent;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 import javax.swing.*;
@@ -27,6 +29,11 @@ public class TopStudentsBar extends JFrame {
                 true,
                 false
         );
+        CategoryPlot plot = (CategoryPlot) chart.getPlot();
+
+        BarRenderer renderer = (BarRenderer) plot.getRenderer();
+        renderer.setMaximumBarWidth(0.2);
+
         ChartPanel chartPanel = new ChartPanel(chart);
         chartPanel.setPreferredSize(new Dimension(560, 370));
         setContentPane(chartPanel);
@@ -39,7 +46,7 @@ public class TopStudentsBar extends JFrame {
             String fullname = student.getName() + " " + student.getSurname();
             int totalScore = student.getScoreEx() + student.getScorePr();
 
-            dataset.addValue(totalScore, "Total Score", fullname);
+            dataset.addValue(totalScore, "Student score", fullname);
         }
 
         return dataset;
